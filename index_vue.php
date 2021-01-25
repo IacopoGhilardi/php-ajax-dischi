@@ -11,8 +11,20 @@
     <div id="root">
         <header>
             <div class="container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Spotify.png" alt="logo-spotify">
+                <img :src="logo" alt="logo-spotify">
             </div>
+            
+            <form action="partialsphp/db.php" method="get">
+                <select value="genre" name="genre">
+                    <option value="">Filtra per genere</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Rock">Jazz</option>
+                    <option value="Rock">Metal</option>
+                </select>
+                <button type="submit">Filtra</button>
+            </form>
+
         </header>
 
         <main>

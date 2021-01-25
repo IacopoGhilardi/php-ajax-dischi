@@ -1851,12 +1851,14 @@ console.log('vue');
 var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
   el: '#root',
   data: {
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/7/71/Spotify.png',
     disks: []
   },
   mounted: function mounted() {
     var _this = this;
 
     axios.get('partialsphp/db.php').then(function (response) {
+      console.log(response);
       _this.disks = response.data;
     });
   }

@@ -1,5 +1,4 @@
 <?php
-
     $disks = [
         [
             "poster" => "https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg",
@@ -73,7 +72,21 @@
         ]
     ];
 
+    
+    $genreFilter = $_GET["genre"];
+    $filteredArray = [];
+    foreach ($disks as $disk) {
+        if ($genreFilter == $disk["genre"]) {
+            $filteredArray[] = $disk;
+        }
+    }
+    $done = false;
 
     header('Content-type: application/json');
+    if ($genreFilter == "") {
+        echo json_encode($disks);
+    } else {
+        echo json_encode($filteredArray);
+    }
 
-    echo json_encode($disks);
+    
