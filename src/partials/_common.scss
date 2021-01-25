@@ -8,3 +8,10 @@ body {
     font-size: 16px;
     background-color: $mainGray;
 }
+
+.container {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -13,21 +13,26 @@
 <body>
 
     <header>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Spotify.png" alt="logo-spotify">
+        <div class="container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Spotify.png" alt="logo-spotify">
+        </div>
     </header>
 
     <main>
-        <?php foreach($disks as $disk) { ?>
-            <div class="card">
-                <div class="image-box">
-                    <img src="<?php echo $disk["poster"] ?>" alt="cover">
-                </div>
-                <h2><?php echo $disk["title"] ?></h2>
-                <p><?php echo $disk["author"] ?></p>
-                <p><?php echo $disk["year"] ?></p>
-            </div>
-            
-        <?php } ?>
+        <div class="container">
+            <?php foreach($disks as $disk) { ?>
+                    <div class="card">
+                        <div class="image-box">
+                            <img src="<?php echo $disk["poster"] ?>" alt="cover">
+                        </div>
+                        <h2><?php echo $disk["title"] ?></h2>
+                        <p><?php echo $disk["author"] ?></p>
+                        <p><?php echo $disk["year"] ?></p>
+                    </div>
+                    
+                <?php } ?>
+        </div>
+
     </main>
     
 </body>

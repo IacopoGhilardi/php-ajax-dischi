@@ -3,6 +3,8 @@ header {
   height: 80px;
   background-color: black;
   padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 header img {
   height: 100%;
@@ -20,12 +22,18 @@ body {
   background-color: #181818;
 }
 
+.container {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 main {
   background-color: #181818;
   display: flex;
   justify-content: center;
   padding: 10px;
-  flex-wrap: wrap;
 }
 main .card {
   width: 300px;

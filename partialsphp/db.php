@@ -72,3 +72,8 @@
             "year" => "1987"
         ]
     ];
+
+
+    header('Content-type: application/json');
+
+    echo json_encode($disks);
